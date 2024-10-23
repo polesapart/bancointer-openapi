@@ -1,7 +1,7 @@
 {
   "openapi" : "3.0.0",
   "info" : {
-    "title" : "Coleção",
+    "title" : "Banco Inter PJ",
     "version" : "1.0"
   },
   "servers" : [ {
