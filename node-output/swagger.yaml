@@ -2,89 +2,55 @@
   "openapi" : "3.0.0",
   "info" : {
     "title" : "Banco Inter PJ",
-    "version" : "1.0"
+    "version" : "1.1"
   },
   "servers" : [ {
-    "url" : "https://virtserver.swaggerhub.com/ALEXANDRENUNES/BancoInter/1.0",
-    "description" : "SwaggerHub API Auto Mocking"
-  }, {
-    "url" : "http://{{apipartnersbaseurl}}"
-  }, {
-    "url" : "http://{{sandboxbaseurl}}"
-  }, {
     "url" : "https://cdpj.partners.bancointer.com.br"
   }, {
     "url" : "https://cdpj-sandbox.partners.uatinter.co"
+  }, {
+    "url" : "https://virtserver.swaggerhub.com/ALEXANDRENUNES/BancoInter/1.1",
+    "description" : "SwaggerHub API Auto Mocking"
   } ],
   "tags" : [ {
     "name" : "PRODUÇÃO"
   }, {
-    "name" : "PRODUÇÃO > API Cobranca (Boleto com Pix)"
+    "name" : "API Cobrança (Boleto com Pix)"
   }, {
-    "name" : "PRODUÇÃO > API Cobranca (Boleto com Pix) > Cobranças"
+    "name" : "API Cobrança (Boleto com Pix) > Cobranças"
   }, {
-    "name" : "PRODUÇÃO > API Cobranca (Boleto com Pix) > WebHook"
+    "name" : "API Cobrança (Boleto com Pix) > WebHook"
   }, {
-    "name" : "PRODUÇÃO > API Banking"
+    "name" : "API Banking"
   }, {
-    "name" : "PRODUÇÃO > API Banking > Extrato"
+    "name" : "API Banking > Extrato"
   }, {
-    "name" : "PRODUÇÃO > API Banking > Saldo"
+    "name" : "API Banking > Saldo"
   }, {
-    "name" : "PRODUÇÃO > API Banking > Pagamento"
+    "name" : "API Banking > Pagamento"
   }, {
-    "name" : "PRODUÇÃO > API Banking > Pix Pagamento"
+    "name" : "API Banking > Pix Pagamento"
   }, {
-    "name" : "PRODUÇÃO > API Banking > Webhook"
+    "name" : "API Banking > Webhook"
   }, {
-    "name" : "PRODUÇÃO > API Pix"
+    "name" : "API Pix"
   }, {
-    "name" : "PRODUÇÃO > API Pix > Cobrança imediata"
+    "name" : "API Pix > Cobrança imediata"
   }, {
-    "name" : "PRODUÇÃO > API Pix > Cobrancas com Vencimento"
+    "name" : "API Pix > Cobrancas com Vencimento"
   }, {
-    "name" : "PRODUÇÃO > API Pix > Lote Cobrancas com Vencimento"
+    "name" : "API Pix > Lote Cobrancas com Vencimento"
   }, {
-    "name" : "PRODUÇÃO > API Pix > Payload Location"
+    "name" : "API Pix > Payload Location"
   }, {
-    "name" : "PRODUÇÃO > API Pix > Pix"
+    "name" : "API Pix > Pix"
   }, {
-    "name" : "PRODUÇÃO > API Pix > Webhook"
-  }, {
-    "name" : "SANDBOX"
-  }, {
-    "name" : "SANDBOX > SANDBOX - API Cobranca (Boleto com Pix)"
-  }, {
-    "name" : "SANDBOX > SANDBOX - API Cobranca (Boleto com Pix) > Cobranças"
-  }, {
-    "name" : "SANDBOX > SANDBOX - API Cobranca (Boleto com Pix) > WebHook"
-  }, {
-    "name" : "SANDBOX > SANDBOX - API Banking"
-  }, {
-    "name" : "SANDBOX > SANDBOX - API Banking > Extrato"
-  }, {
-    "name" : "SANDBOX > SANDBOX - API Banking > Saldo"
-  }, {
-    "name" : "SANDBOX > SANDBOX - API Banking > Pagamento"
-  }, {
-    "name" : "SANDBOX > SANDBOX - API Banking > Webhook"
-  }, {
-    "name" : "SANDBOX > SANDBOX - API Pix"
-  }, {
-    "name" : "SANDBOX > SANDBOX - API Pix > Cobrança imediata"
-  }, {
-    "name" : "SANDBOX > SANDBOX - API Pix > Cobrancas com Vencimento"
-  }, {
-    "name" : "SANDBOX > SANDBOX - API Pix > Payload Location"
-  }, {
-    "name" : "SANDBOX > SANDBOX - API Pix > Pix"
-  }, {
-    "name" : "SANDBOX > SANDBOX - API Pix > Webhook"
+    "name" : "API Pix > Webhook"
   } ],
   "paths" : {
     "/cobranca/v3/cobrancas" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Cobranca (Boleto com Pix) > Cobranças" ],
+        "tags" : [ "API Cobrança (Boleto com Pix) > Cobranças" ],
         "summary" : "Recuperar coleção de cobranças",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -130,7 +96,7 @@
         } ]
       },
       "post" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Cobranca (Boleto com Pix) > Cobranças" ],
+        "tags" : [ "API Cobrança (Boleto com Pix) > Cobranças" ],
         "summary" : "Emitir cobrança",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -201,7 +167,7 @@
     },
     "/cobranca/v3/cobrancas/webhook/callbacks" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Cobranca (Boleto com Pix) > WebHook" ],
+        "tags" : [ "API Cobrança (Boleto com Pix) > WebHook" ],
         "summary" : "Consulta de callbacks enviados",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -247,7 +213,7 @@
         } ]
       },
       "post" : {
-        "tags" : [ "PRODUÇÃO > API Cobranca (Boleto com Pix) > Cobranças" ],
+        "tags" : [ "API Cobrança (Boleto com Pix) > Cobranças" ],
         "summary" : "Emitir cobrança",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -338,7 +304,7 @@
     },
     "/cobranca/v3/cobrancas/{codigoSolicitacao}" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Cobranca (Boleto com Pix) > Cobranças" ],
+        "tags" : [ "API Cobrança (Boleto com Pix) > Cobranças" ],
         "summary" : "Recuperar cobrança",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -374,7 +340,7 @@
         } ]
       },
       "patch" : {
-        "tags" : [ "PRODUÇÃO > API Cobranca (Boleto com Pix) > Cobranças" ],
+        "tags" : [ "API Cobrança (Boleto com Pix) > Cobranças" ],
         "summary" : "Editar cobrança",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -425,7 +391,7 @@
     },
     "/cobranca/v3/cobrancas/{codigoSolicitacao}/pdf" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Cobranca (Boleto com Pix) > Cobranças" ],
+        "tags" : [ "API Cobrança (Boleto com Pix) > Cobranças" ],
         "summary" : "Recuperar cobrança em PDF",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -463,7 +429,7 @@
     },
     "/cobranca/v3/cobrancas/{codigoSolicitacao}/cancelar" : {
       "post" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Cobranca (Boleto com Pix) > Cobranças" ],
+        "tags" : [ "API Cobrança (Boleto com Pix) > Cobranças" ],
         "summary" : "Cancelar cobrança",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -511,7 +477,7 @@
     },
     "/cobranca/v3/cobrancas/sumario" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Cobranca (Boleto com Pix) > Cobranças" ],
+        "tags" : [ "API Cobrança (Boleto com Pix) > Cobranças" ],
         "summary" : "Recuperar sumário de cobranças",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -559,7 +525,7 @@
     },
     "/cobranca/v3/cobrancas/webhook" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Cobranca (Boleto com Pix) > WebHook" ],
+        "tags" : [ "API Cobrança (Boleto com Pix) > WebHook" ],
         "summary" : "Obter webhook cadastrado",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -585,7 +551,7 @@
         } ]
       },
       "put" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Cobranca (Boleto com Pix) > WebHook" ],
+        "tags" : [ "API Cobrança (Boleto com Pix) > WebHook" ],
         "summary" : "Criar ou editar um webhook",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -623,7 +589,7 @@
         } ]
       },
       "delete" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Cobranca (Boleto com Pix) > WebHook" ],
+        "tags" : [ "API Cobrança (Boleto com Pix) > WebHook" ],
         "summary" : "Excluir webhook",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -651,7 +617,7 @@
     },
     "/banking/v2/extrato" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Banking > Extrato" ],
+        "tags" : [ "API Banking > Extrato" ],
         "summary" : "Consultar extrato",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -699,7 +665,7 @@
     },
     "/banking/v2/extrato/exportar" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Banking > Extrato" ],
+        "tags" : [ "API Banking > Extrato" ],
         "summary" : "Recuperar extrato em PDF",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -747,7 +713,7 @@
     },
     "/banking/v2/extrato/completo" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Banking > Extrato" ],
+        "tags" : [ "API Banking > Extrato" ],
         "summary" : "Consultar extrato enriquecido",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -795,7 +761,7 @@
     },
     "/banking/v2/saldo" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Banking > Saldo" ],
+        "tags" : [ "API Banking > Saldo" ],
         "summary" : "Consultar saldo",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -833,7 +799,7 @@
     },
     "/banking/v2/pagamento" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Banking > Pagamento" ],
+        "tags" : [ "API Banking > Pagamento" ],
         "summary" : "Buscar pagamentos",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -879,7 +845,7 @@
         } ]
       },
       "post" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Banking > Pagamento" ],
+        "tags" : [ "API Banking > Pagamento" ],
         "summary" : "Incluir pagamento com código de barras",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -922,7 +888,7 @@
     },
     "/banking/v2/pagamento/darf" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Banking > Pagamento" ],
+        "tags" : [ "API Banking > Pagamento" ],
         "summary" : "Buscar pagamentos de DARF",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -968,7 +934,7 @@
         } ]
       },
       "post" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Banking > Pagamento" ],
+        "tags" : [ "API Banking > Pagamento" ],
         "summary" : "Incluir pagamento de DARF",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1019,7 +985,7 @@
     },
     "/banking/v2/pagamento/lote" : {
       "post" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Banking > Pagamento" ],
+        "tags" : [ "API Banking > Pagamento" ],
         "summary" : "Incluir pagamentos em lote",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1086,7 +1052,7 @@
     },
     "/banking/v2/pagamento/lote/{idLote}" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Banking > Pagamento" ],
+        "tags" : [ "API Banking > Pagamento" ],
         "summary" : "Buscar lote de pagamentos",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1124,7 +1090,7 @@
     },
     "/banking/v2/pagamento/{codigoTransacao}" : {
       "delete" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Banking > Pagamento" ],
+        "tags" : [ "API Banking > Pagamento" ],
         "summary" : "Cancelar agendamento do pagamento",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1162,7 +1128,7 @@
     },
     "/banking/v2/pix" : {
       "post" : {
-        "tags" : [ "PRODUÇÃO > API Banking > Pix Pagamento" ],
+        "tags" : [ "API Banking > Pix Pagamento" ],
         "summary" : "Incluir Pagamento Pix",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1208,7 +1174,7 @@
     },
     "/banking/v2/pix/{codigoSolicitacao}" : {
       "get" : {
-        "tags" : [ "PRODUÇÃO > API Banking > Pix Pagamento" ],
+        "tags" : [ "API Banking > Pix Pagamento" ],
         "summary" : "Consultar Pagamento Pix",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1246,7 +1212,7 @@
     },
     "/banking/v2/webhooks/{tipoWebhook}" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Banking > Webhook" ],
+        "tags" : [ "API Banking > Webhook" ],
         "summary" : "Obter webhook cadastrado",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1282,7 +1248,7 @@
         } ]
       },
       "put" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Banking > Webhook" ],
+        "tags" : [ "API Banking > Webhook" ],
         "summary" : "Configurar o Webhook Pix",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1330,7 +1296,7 @@
         } ]
       },
       "delete" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Banking > Webhook" ],
+        "tags" : [ "API Banking > Webhook" ],
         "summary" : "Cancelar o webhook Pix",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1368,7 +1334,7 @@
     },
     "/banking/v2/webhooks/{tipoWebhook}/callbacks" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Banking > Webhook" ],
+        "tags" : [ "API Banking > Webhook" ],
         "summary" : "Consultar callbacks",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1426,7 +1392,7 @@
     },
     "/pix/v2/cob" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Cobrança imediata" ],
+        "tags" : [ "API Pix > Cobrança imediata" ],
         "summary" : "Consultar lista de cobrancas",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1472,7 +1438,7 @@
         } ]
       },
       "post" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Cobrança imediata" ],
+        "tags" : [ "API Pix > Cobrança imediata" ],
         "summary" : "Criar cobrança imediata",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1524,7 +1490,7 @@
     },
     "/pix/v2/cob/{txid}" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Cobrança imediata" ],
+        "tags" : [ "API Pix > Cobrança imediata" ],
         "summary" : "Consultar cobrança imediata",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1560,7 +1526,7 @@
         } ]
       },
       "put" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Cobrança imediata" ],
+        "tags" : [ "API Pix > Cobrança imediata" ],
         "summary" : "Criar cobrança imediata com txid",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1627,7 +1593,7 @@
         } ]
       },
       "patch" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Cobrança imediata" ],
+        "tags" : [ "API Pix > Cobrança imediata" ],
         "summary" : "Revisar cobrança imediata",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1679,7 +1645,7 @@
     },
     "/pix/v2/cobv" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Cobrancas com Vencimento" ],
+        "tags" : [ "API Pix > Cobrancas com Vencimento" ],
         "summary" : "Consultar lista de cobrancas com vencimento",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1729,7 +1695,7 @@
     },
     "/pix/v2/cobv/{txid}" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Cobrancas com Vencimento" ],
+        "tags" : [ "API Pix > Cobrancas com Vencimento" ],
         "summary" : "Consultar cobrança com vencimento",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1765,7 +1731,7 @@
         } ]
       },
       "put" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Cobrancas com Vencimento" ],
+        "tags" : [ "API Pix > Cobrancas com Vencimento" ],
         "summary" : "Atualizar cobrança com vencimento",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1837,7 +1803,7 @@
         } ]
       },
       "patch" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Cobrancas com Vencimento" ],
+        "tags" : [ "API Pix > Cobrancas com Vencimento" ],
         "summary" : "Revisar cobrança com vencimento",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1935,7 +1901,7 @@
     },
     "/pix/v2/lotecobv/{id}" : {
       "get" : {
-        "tags" : [ "PRODUÇÃO > API Pix > Lote Cobrancas com Vencimento" ],
+        "tags" : [ "API Pix > Lote Cobrancas com Vencimento" ],
         "summary" : "Consultar lote cobrança com vencimento",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -1971,7 +1937,7 @@
         } ]
       },
       "put" : {
-        "tags" : [ "PRODUÇÃO > API Pix > Lote Cobrancas com Vencimento" ],
+        "tags" : [ "API Pix > Lote Cobrancas com Vencimento" ],
         "summary" : "Criar/Alterar lote de cobrança com vencimento",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -2058,7 +2024,7 @@
         } ]
       },
       "patch" : {
-        "tags" : [ "PRODUÇÃO > API Pix > Lote Cobrancas com Vencimento" ],
+        "tags" : [ "API Pix > Lote Cobrancas com Vencimento" ],
         "summary" : "Revisar lote de cobrança com vencimento",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -2144,7 +2110,7 @@
     },
     "/pix/v2/lotecobv/{id}/sumario" : {
       "get" : {
-        "tags" : [ "PRODUÇÃO > API Pix > Lote Cobrancas com Vencimento" ],
+        "tags" : [ "API Pix > Lote Cobrancas com Vencimento" ],
         "summary" : "Sumário de um lote de cobranças com vencimento",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -2182,7 +2148,7 @@
     },
     "/pix/v2/lotecobv" : {
       "get" : {
-        "tags" : [ "PRODUÇÃO > API Pix > Lote Cobrancas com Vencimento" ],
+        "tags" : [ "API Pix > Lote Cobrancas com Vencimento" ],
         "summary" : "Consultar lista lotes de cobrancas com vencimento",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -2230,7 +2196,7 @@
     },
     "/pix/v2/lotecobv/{id}/situacao/{situacao}" : {
       "get" : {
-        "tags" : [ "PRODUÇÃO > API Pix > Lote Cobrancas com Vencimento" ],
+        "tags" : [ "API Pix > Lote Cobrancas com Vencimento" ],
         "summary" : "Consultar cobranças de um lote por situação",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -2278,7 +2244,7 @@
     },
     "/pix/v2/loc" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Payload Location" ],
+        "tags" : [ "API Pix > Payload Location" ],
         "summary" : "Consultar locations cadastradas",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -2324,7 +2290,7 @@
         } ]
       },
       "post" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Payload Location" ],
+        "tags" : [ "API Pix > Payload Location" ],
         "summary" : "Criar location do payload",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -2364,7 +2330,7 @@
     },
     "/pix/v2/loc/{id}" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Payload Location" ],
+        "tags" : [ "API Pix > Payload Location" ],
         "summary" : "Recuperar location do payload",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -2402,7 +2368,7 @@
     },
     "/pix/v2/loc/{id}/txid" : {
       "delete" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Payload Location" ],
+        "tags" : [ "API Pix > Payload Location" ],
         "summary" : "Desvincular uma cobranca de uma location",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -2440,7 +2406,7 @@
     },
     "/pix/v2/pix/{e2eId}" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Pix" ],
+        "tags" : [ "API Pix > Pix" ],
         "summary" : "Consultar Pix",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -2478,7 +2444,7 @@
     },
     "/pix/v2/pix" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Pix" ],
+        "tags" : [ "API Pix > Pix" ],
         "summary" : "Consultar Pix recebidos",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -2526,7 +2492,7 @@
     },
     "/pix/v2/pix/{e2eid}/devolucao/{id}" : {
       "put" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Pix" ],
+        "tags" : [ "API Pix > Pix" ],
         "summary" : "Solicitar devolução",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -2586,7 +2552,7 @@
     },
     "/pix/v2/webhook/{chave}" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Webhook" ],
+        "tags" : [ "API Pix > Webhook" ],
         "summary" : "Obter webhook cadastrado",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -2622,7 +2588,7 @@
         } ]
       },
       "put" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Webhook" ],
+        "tags" : [ "API Pix > Webhook" ],
         "summary" : "Configurar o Webhook Pix",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -2670,7 +2636,7 @@
         } ]
       },
       "delete" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Webhook" ],
+        "tags" : [ "API Pix > Webhook" ],
         "summary" : "Cancelar o webhook Pix",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -2708,7 +2674,7 @@
     },
     "/pix/v2/webhook/callbacks" : {
       "get" : {
-        "tags" : [ "SANDBOX > SANDBOX - API Pix > Webhook" ],
+        "tags" : [ "API Pix > Webhook" ],
         "summary" : "Consultar callbacks",
         "parameters" : [ {
           "name" : "Content-Type",
@@ -2757,7 +2723,7 @@
     "/oauth/v2/token" : {
       "post" : {
         "tags" : [ "default" ],
-        "summary" : "Gera-token-certificado_SANDBOX",
+        "summary" : "Gera-token-certificado",
         "requestBody" : {
           "content" : {
             "application/x-www-form-urlencoded" : {
@@ -2787,11 +2753,11 @@
         "properties" : {
           "client_id" : {
             "type" : "string",
-            "example" : "{{clientId_SANDBOX}}"
+            "example" : "{{clientId}}"
           },
           "client_secret" : {
             "type" : "string",
-            "example" : "{{clientSecret_SANDBOX}}"
+            "example" : "{{clientSecret}}"
           },
           "scope" : {
             "type" : "string",
